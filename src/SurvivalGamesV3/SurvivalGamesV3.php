@@ -183,13 +183,9 @@ class SurvivalGamesV3 extends PluginBase implements Listener {
 		{
 			$config = new Config($this->getDataFolder() . "/config.yml", Config::YAML);
 			$sofar = $config->get($level . "StartTime");
-			if($sofar > 0)
-			{
-				$to = clone $event->getFrom();
-				$to->yaw = $event->getTo()->yaw;
-				$to->pitch = $event->getTo()->pitch;
-				$event->setTo($to);
-			}
+			if($sofar > 0){
+ +				$event->setCancelled();
+  			}
 		}
 	}
 	
