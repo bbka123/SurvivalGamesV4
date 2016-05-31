@@ -867,8 +867,10 @@ class GameSender extends PluginTask {
 		$second = $aop - $minusplayer . "/ 24";
 	}
 	public function randomChest(Level $level){
-		$chance = rand(0,9);
-			if($chance < 3){
+		$config = new Config($this->getDataFolder() . "/config.yml", Config::YAML);
+		$this->customchance = $config->get("percent-chestspawn");
+		$chance = rand(0,100);
+			if($chance < $this->customchance){
 			$k1 = array_rand($config->get("chestradius"));
 			$radius = $config->get("chestradius")[$k1];
         		$randx = mt_rand($chx - $radius, $chx + $radius);
