@@ -184,7 +184,11 @@ class SurvivalGamesV3 extends PluginBase implements Listener {
 			$config = new Config($this->getDataFolder() . "/config.yml", Config::YAML);
 			$sofar = $config->get($level . "StartTime");
 			if($sofar > 0){
- +				$event->setCancelled(true);
+				$from = $event->getFrom();
+                        	$to = $event->getTo();
+                        	if($from->x !== $to->x or $from->z !== $to->z){
+                        	$event->setCancelled(true);
+                        	}
   			}
 		}
 	}
