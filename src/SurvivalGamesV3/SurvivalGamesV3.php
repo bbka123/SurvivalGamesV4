@@ -9,6 +9,7 @@ use pocketmine\level\sound\PopSound;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerDeathEvent;
+use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
 use pocketmine\utils\TextFormat as C;
@@ -148,6 +149,14 @@ class SurvivalGamesV3 extends PluginBase implements Listener {
 		}
 		}
 	}
+	
+	public function removeEffects(PlayerQuitEvent $event){
+		$ef = Effect::getEffect(1);
+          $ef1 = Effect::getEffect(8);
+          $event->getPlayer()->removeEffect($ef);
+          $event->getPlayer()->removeEffect($ef1);
+	}
+	
  	public function PlayerDeath(PlayerDeathEvent $event){
           foreach($this->getServer()->getOnlinePlayers() as $pl){
 	  $config = new Config($this->getDataFolder() . "/config.yml", Config::YAML);
@@ -165,6 +174,7 @@ class SurvivalGamesV3 extends PluginBase implements Listener {
           $light->z = $p->z;
           $pl->dataPacket($light);
           $event->setDeathMessage("§7" . $event->getEntity()->getName() . " was demolished ");
+          
           }
           
  		}
