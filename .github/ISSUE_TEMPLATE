@@ -1,7 +1,7 @@
-DO NOT DELETE THIS!!!!!
+Please Do NOT Delete The Following:
 
 Before you make an issue, make sure your issue matches the criteria below
-Once the issue is submitted, PLEASE TICK THE CHECKBOXES BY CLICKING ON THEM! 
+Once the issue is submitted, Select all that Apply to your Issue:
 - [ ] This issue isn't duplicated - you can check if it is by using the search bar located at the top left hand corner and select "Issues" on the left.
 - [ ] This issue includes appropriate markdown for sections - e.g. code blocks for crash dumps.
 - [ ] This issue is written in your native language for maximal clarity
@@ -9,15 +9,15 @@ Once the issue is submitted, PLEASE TICK THE CHECKBOXES BY CLICKING ON THEM!
 - [ ] This issue is for SurvivalGamesV3, and not any other plugin.
 - [ ] This is not a suggestion, but an actual issue<br> <br>
 
-NOTE: If it is a suggestion, title it [SUGGESTION] ______
+#### NOTE: If it is a suggestion, title it [SUGGESTION] ______
 
-If all the checkboxes are checked, congratulations! Fill out the fields below
-! = required
+If all the checkboxes are checked, congratulations! Fill out the fields below:
+[!] = required
 
-! <--STATE SERVER PROVIDER HERE (EG POCKETMINE, IMAGICALMINE, GENYSIS etc)-->
+### [!] Please Provide Your Server Provider (ImagicalMine, Genisys, Clearsky, etc):
 
-! <--STATE ISSUE HERE-->
+### [!] The Issue:
 
-<--PUT ANY CONSOLE ERRORS HERE-->
+#### PHP Code Errors:
 
-<--IF CRASH DUMPS ARE AVAILABLE, PASTE THE ENTIRE FILE'S CONTENTS HERE-->
+#### If Crash Dumps are Available, Please Post it here:
